@@ -1,0 +1,17 @@
+﻿@model CoreCrudPersonel.Models.Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+@using (Html.BeginForm("BirimGuncelle", "Birim", FormMethod.Post))
+{
+    <b>Departman Adı</b>
+    @Html.TextBoxFor(x => x.BirimID, new { @class = "form-control" })
+
+    <b>Departman Id</b>
+    @Html.TextBoxFor(x => x.BirimAd, new { @class = "form-control" })
+    <button class="btn btn-primary" style="background-color:#ff6a00">Birim Güncelle</button>
+}
+
+

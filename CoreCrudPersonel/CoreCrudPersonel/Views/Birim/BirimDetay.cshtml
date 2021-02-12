@@ -1,0 +1,35 @@
+﻿@using CoreCrudPersonel.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h2>@ViewBag.brmad Birimi</h2>
+
+
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Personel Adı</th>
+        <th>Personel Soyadı</th>
+        <th>Personel Şehir</th>
+        
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonelID</td>
+            <td>@x.personelAd</td>
+            <td>@x.personelSoyad</td>
+            <td>@x.personelSehir</td>
+           
+
+        </tr>
+    }
+</table>
+
+
+

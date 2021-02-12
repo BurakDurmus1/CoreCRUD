@@ -1,0 +1,39 @@
+﻿@using CoreCrudPersonel.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Personel Adı</th>
+        <th>Personel Soyadı</th>
+        <th>Personel Şehir</th>
+        <th>Personel Departman</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonelID</td>
+            <td>@x.personelAd</td>
+            <td>@x.personelSoyad</td>
+            <td>@x.personelSehir</td>
+            <td>@x.Birim.BirimAd</td>
+            <td><a href="/Personel/PersonelSil/@x.PersonelID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Personel/PersonelSil/@x.PersonelID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="#" class="btn btn-success">Detaylar</a></td>
+
+        </tr>
+    }
+</table>
+
+<a href="/Personel/YeniPersonel/" class="btn btn-primary">Yeni Personel</a>
+

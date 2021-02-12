@@ -1,0 +1,16 @@
+﻿@model CoreCrudPersonel.Models.Birim
+@{
+    ViewData["Title"] = "YeniBirim";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>YeniBirim</h1>
+<br />
+<form class="form-group" method="post">
+    <b>Birim Adı</b>
+    @Html.TextBoxFor(x => x.BirimAd, new { @class = "form-control" })
+    <button class="btn btn-info">Birim Ekle</button>
+</form>
+
+
+
